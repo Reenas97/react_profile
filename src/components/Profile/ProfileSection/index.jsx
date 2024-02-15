@@ -2,7 +2,10 @@ import styles from "./styles.module.css"
 
 export default function ProfileSection(props){
     return (
-        <div className={styles.profileSection}>
+        <div 
+            {...props}
+            className={`${styles.profileSection} ${props.className}`}
+        >
             {props.children}
         </div>
     )

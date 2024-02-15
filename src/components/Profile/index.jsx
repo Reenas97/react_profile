@@ -13,11 +13,9 @@ export default function Profile(props){
                 <span>{props.name}</span>
             </Title>
             <ProfileSection>{props.bio}</ProfileSection>
-            <ProfileSection>
-                <div className={styles.profileLinks}>
-                    <ProfileButton href={props.github}> <img src={iconGithub} alt="GitHub" /> GitHub</ProfileButton>
-                    <ProfileButton href={props.linkedin}> <img src={iconLinkedin} alt="LinkedIn" /> LinkedIn</ProfileButton>
-                </div>
+            <ProfileSection className={styles.profileLinks}>
+                <ProfileButton href={props.github}> <img src={iconGithub} alt="GitHub" /> GitHub</ProfileButton>
+                <ProfileButton href={props.linkedin}> <img src={iconLinkedin} alt="LinkedIn" /> LinkedIn</ProfileButton>
             </ProfileSection>
         </div>
     )
